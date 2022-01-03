@@ -13,7 +13,9 @@ import matplotlib.pyplot as plt
 import colorama
 import crayons
 import warnings
-warnings.filterwarnings("ignore")
+
+
+warnings.filterwarnings("ignore") #Added by Github copilot
 colorama.init()
 
 def vp_start_gui():
@@ -64,7 +66,7 @@ class Trading_Gui:
         _ana2color = '#d9d9d9' # X11 color: 'gray85'
         self.root = root
         self.style = ttk.Style()
-        self.style.theme_use("vista")
+        self.style.theme_use("clam")
         self.style.configure('.',background=_bgcolor)
         self.style.configure('.',foreground=_fgcolor)
         self.style.configure('.',font="TkDefaultFont")
@@ -81,7 +83,7 @@ class Trading_Gui:
         self.CheckVar = IntVar()
 
         top.geometry("990x518+446+155")
-        top.title("Trading Gui")
+        top.title("Crypto Pal by Yousuf & Ronit")
         top.configure(background="#d9d9d9")
 
         self.TFrame1 = ttk.Frame(top)
@@ -143,7 +145,7 @@ class Trading_Gui:
         self.Exit.configure(width=76)
 
         self.TFrame3 = Frame(top)
-        self.TFrame3.place(relx=0.15, rely=0.05, relheight=0.1, relwidth=0.8)
+        self.TFrame3.place(relx=0.15, rely=0.015, relheight=0.1, relwidth=0.8)
         self.TFrame3.configure(relief=GROOVE)
         self.TFrame3.configure(borderwidth="2")
         self.TFrame3.configure(relief=GROOVE)
@@ -151,11 +153,11 @@ class Trading_Gui:
         self.TFrame3.configure(takefocus="0")
 
         self.TLabel5 = Label(self.TFrame3)
-        self.TLabel5.place(relx=0.01, rely=0.18, height=19, width=55)
+        self.TLabel5.place(relx=0.01, rely=0.18, height=19, width=45)
         self.TLabel5.configure(font=('Helvetica', 8))
         self.TLabel5.configure(foreground="#075bb8")
         self.TLabel5.configure(relief=FLAT)
-        self.TLabel5.configure(text='''Ticker:''')
+        self.TLabel5.configure(text='''Crypto:''')
 
         self.ticker = Entry(self.TFrame3)
         self.ticker.insert(END, str("USDT_BTC"))
@@ -172,7 +174,7 @@ class Trading_Gui:
         self.ticker.configure(takefocus="0")
 
         self.TLabel4 = Label(self.TFrame3)
-        self.TLabel4.place(relx=0.18, rely=0.18, height=19, width=75)
+        self.TLabel4.place(relx=0.18, rely=0.18, height=19, width=65)
         self.TLabel4.configure(font=('Helvetica', 8))
         self.TLabel4.configure(foreground="#075bb8")
         self.TLabel4.configure(relief=FLAT)
@@ -180,7 +182,7 @@ class Trading_Gui:
 
         self.StopLossEdge = Entry(self.TFrame3)
         self.StopLossEdge.insert(END, str(10))
-        self.StopLossEdge.place(relx=0.28, rely=0.18, relheight=0.44, relwidth=0.09)
+        self.StopLossEdge.place(relx=0.29, rely=0.18, relheight=0.44, relwidth=0.09)
         self.StopLossEdge.configure(font=('Helvetica', 10))
         self.StopLossEdge.configure(background="white")
         self.StopLossEdge.configure(font="TkTextFont")
@@ -259,7 +261,7 @@ class Trading_Gui:
 
         self.style.configure('Treeview.Heading',  font="TkDefaultFont")
         self.Scrolledtreeview1 = ScrolledTreeView(top)
-        self.Scrolledtreeview1.place(relx=0.15, rely=0.23, relheight=0.28, relwidth=0.6)
+        self.Scrolledtreeview1.place(relx=0.15, rely=0.22, relheight=0.28, relwidth=0.59)
         self.Scrolledtreeview1.configure(columns="Col1 Col2 Col3 Col4 Col5")
         self.Scrolledtreeview1.configure(takefocus="0")
         self.Scrolledtreeview1.heading("#0",text="Id")
@@ -305,7 +307,7 @@ class Trading_Gui:
 
         self.Scrolledtreeview2 = ScrolledTreeView(top)
         self.style.configure("Scrolledtreeview2", font='helvetica 24')
-        self.Scrolledtreeview2.place(relx=0.15, rely=0.61, relheight=0.32, relwidth=0.8)
+        self.Scrolledtreeview2.place(relx=0.15, rely=0.67, relheight=0.33, relwidth=0.8)
         self.Scrolledtreeview2.configure(columns="Col1 Col2 Col3 Col4 Col5 Col6 Col7")
         self.Scrolledtreeview2.configure(takefocus="0")
         self.Scrolledtreeview2.heading("#0", text="Id")
@@ -358,7 +360,7 @@ class Trading_Gui:
         self.Scrolledtreeview2.column("Col7", anchor="w")
 
         self.Label1 = Label(top)
-        self.Label1.place(relx=0.15, rely=0.17, height=25, width=595)
+        self.Label1.place(relx=0.15, rely=0.17, height=25, width=470)
         self.Label1.configure(font=('Helvetica', 10))
         self.Label1.configure(anchor=N)
         self.Label1.configure(background="#b4c2fe")
@@ -371,9 +373,27 @@ class Trading_Gui:
         self.Label1.configure(text='''Opened Positions                                By default Our Inverstment is 1000$''')
         self.Label1.configure(textvariable=test_support)
         self.Label1.configure(width=459)
+        
+        self.Label21 = Label(top)
+        self.Label21.place(relx=0.45, rely=0.41, height=90, width=200)
+        self.Label21.configure(font=('Helvetica', 10))
+        self.Label21.configure(activebackground="#f9f9f9")
+        self.Label21.configure(activeforeground="black")
+        self.Label21.configure(anchor=N)
+        self.Label21.configure(background="#b4c2fe")
+        self.Label21.configure(compound="left")
+        self.Label21.configure(cursor="bottom_left_corner")
+        self.Label21.configure(disabledforeground="#a3a3a3")
+        self.Label21.configure(foreground="#000000")
+        self.Label21.configure(highlightbackground="#d9d9d9")
+        self.Label21.configure(highlightcolor="black")
+        self.Label21.configure(justify=LEFT)
+        self.Label21.configure(relief=RIDGE)
+        self.Label21.configure(text='''"This bot is made by Yousuf And Ronit \n Coordinator :- Mr Kapil \n Faculty:- Mr Neeraj Kumar"''')
+        self.Label21.configure(width=400)
 
         self.Label2 = Label(top)
-        self.Label2.place(relx=0.15, rely=0.55, height=25, width=788)
+        self.Label2.place(relx=0.15, rely=0.61, height=25, width=630)
         self.Label2.configure(font=('Helvetica', 10))
         self.Label2.configure(activebackground="#f9f9f9")
         self.Label2.configure(activeforeground="black")
@@ -387,11 +407,13 @@ class Trading_Gui:
         self.Label2.configure(highlightcolor="black")
         self.Label2.configure(justify=LEFT)
         self.Label2.configure(relief=RIDGE)
-        self.Label2.configure(text='''Trades''')
-        self.Label2.configure(width=459)
+        self.Label2.configure(text='''Past Trades History''')
+        self.Label2.configure(width=400)
+        
+        
 
         self.TFrame2 = Frame(top)
-        self.TFrame2.place(relx=0.76, rely=0.23, relheight=0.22, relwidth=0.2)
+        self.TFrame2.place(relx=0.76, rely=0.15, relheight=0.2, relwidth=0.2)
         self.TFrame2.configure(relief=SUNKEN)
         self.TFrame2.configure(borderwidth="2")
         self.TFrame2.configure(relief=SUNKEN)
