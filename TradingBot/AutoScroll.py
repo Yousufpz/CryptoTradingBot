@@ -2,14 +2,14 @@
 from tkinter import *
 import tkinter.ttk as ttk
 
-# The following code is added to facilitate the Scrolled widgets you specified.
+# The following code is added to facilitate the Scrolled widgets you specified and it also help to see thing clearly  
 class AutoScroll(object):
     '''Configure the scrollbars for a widget.'''
 
     def __init__(self, master):
         #  Rozen. Added the try-except clauses so that this class
         #  could be used for scrolled entry widget for which vertical
-        #  scrolling is not supported. 5/7/14.
+        #  scrolling is not supported.  Data 12/15/2000.  self note for furter refrence 
         try:
             vsb = ttk.Scrollbar(master, orient='vertical', command=self.yview)
         except:
