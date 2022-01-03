@@ -368,7 +368,7 @@ class Trading_Gui:
         self.Label1.configure(foreground="#000000")
         self.Label1.configure(justify=LEFT)
         self.Label1.configure(relief=RIDGE)
-        self.Label1.configure(text='''Opened Positions''')
+        self.Label1.configure(text='''Opened Positions                                By default Our Inverstment is 1000$''')
         self.Label1.configure(textvariable=test_support)
         self.Label1.configure(width=459)
 
