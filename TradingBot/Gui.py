@@ -375,7 +375,7 @@ class Trading_Gui:
         self.Label1.configure(width=459)
         
         self.Label21 = Label(top)
-        self.Label21.place(relx=0.45, rely=0.41, height=90, width=200)
+        self.Label21.place(relx=0.75, rely=0.36, height=74, width=170)
         self.Label21.configure(font=('Helvetica', 10))
         self.Label21.configure(activebackground="#f9f9f9")
         self.Label21.configure(activeforeground="black")
@@ -389,8 +389,28 @@ class Trading_Gui:
         self.Label21.configure(highlightcolor="black")
         self.Label21.configure(justify=LEFT)
         self.Label21.configure(relief=RIDGE)
-        self.Label21.configure(text='''"This bot is made by Yousuf And Ronit \n Coordinator :- Mr Kapil \n Faculty:- Mr Neeraj Kumar"''')
+        self.Label21.configure(text='''This bot is made by  \n Yousuf And Ronit \n Coordinator :- Mr Kapil \n Faculty:- Mr Neeraj Kumar''')
         self.Label21.configure(width=400)
+        
+        self.Label22 = Label(top)
+        self.Label22.place(relx=0.15, rely=0.51, height=40, width=630)
+        self.Label22.configure(font=('Helvetica', 10))
+        self.Label22.configure(activebackground="#f9f9f9")
+        self.Label22.configure(activeforeground="black")
+        self.Label22.configure(anchor=N)
+        self.Label22.configure(background="#b4c2fe")
+        self.Label22.configure(compound="left")
+        self.Label22.configure(cursor="bottom_left_corner")
+        self.Label22.configure(disabledforeground="#a3a3a3")
+        self.Label22.configure(foreground="#000000")
+        self.Label22.configure(highlightbackground="#d9d9d9")
+        self.Label22.configure(highlightcolor="black")
+        self.Label22.configure(justify=LEFT)
+        self.Label22.configure(relief=RIDGE)       
+        self.Label22.configure(text='''                      Bot Currenty Uses \n MovingAverage , Momentum , EMA , MACD , RSI ''')
+        self.Label22.configure(width=400)
+        
+        
 
         self.Label2 = Label(top)
         self.Label2.place(relx=0.15, rely=0.61, height=25, width=630)
