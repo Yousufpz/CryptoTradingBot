@@ -3,6 +3,7 @@ import pandas as pd
 from poloniex import Poloniex
 import time
 import datetime
+#import Binance
 
 
 
@@ -11,7 +12,7 @@ class BotGetData(object):
     def __init__(self, pair, peroid):
         self.pair= pair
         self.period= peroid
-        self.conn = Poloniex("YourID", "YourKey")
+        self.conn = Poloniex("YourID", "YourKey")  #making actaul trade .... I prefer not to use the bot the Bot is highty .. and has lot of bugs 
         BotGetData.getHistoricalData(self)
         self.lastPrice= 0
         self.percentChange= 0
@@ -20,7 +21,7 @@ class BotGetData(object):
 
     def getHistoricalData(self):
         startTime = str(datetime.datetime.now() - datetime.timedelta(hours=1))[:19]
-        startTimeUnix = time.mktime(datetime.datetime.strptime(startTime, "%Y-%m-%d %H:%M:%S").timetuple())
+        startTimeUnix = time.mktime(datetime.datetime.strptime(startTime, "%Y-%m-%d %H:%M:%S").timetuple()) # in Year Month Data format
 
         endTime = str(datetime.datetime.now())[:19]
         endTimeUnix = time.mktime(datetime.datetime.strptime(endTime, "%Y-%m-%d %H:%M:%S").timetuple())
