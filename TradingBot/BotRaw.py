@@ -98,6 +98,8 @@ def on_message(ws,message):
     print('__________________________')
     print('__________________________')
     print(f'Invested amount: ${portfolio*closes[-1]}')
+    print('\n______END OF BOT CYCLE____')
+    print('__________________________')
     
     if trade_amt > min_trade_amt:
       buy(trade_amt, price=closes[-1])
